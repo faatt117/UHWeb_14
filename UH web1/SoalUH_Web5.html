@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Hitung - kembali</title>
+</head>
+<body>
+    <form id="angka">
+        <div class="a">
+            <input type="text" placeholder="Harga Barang" id="angka1-value">
+        </div>
+
+        <div class="a">
+            <input type="text" placeholder="uang" id="uang-value">
+        </div>
+
+        <div class="a">
+            <input type="text" placeholder="angka3" id="angka3-value">
+        </div>
+
+        <div class="action">
+            <button type="button" onclick="checkangka3()">Check</button>
+            <p id="message-value"></p>
+        </div>
+    </form>
+
+    <script>
+        function checkangka3() {
+            var angka1Element = document.getElementById("angka1-value");
+            var angka2Element = document.getElementById("angka2-value");
+            var angka3Element = document.getElementById("angka3-value");
+            var messageElement = document.getElementById("message-value");
+    
+            var angka1 = parseFloat(angka1Element.value);
+            var angka2 = parseFloat(angka2Element.value);
+            var angka3 = parseFloat(angka3Element.value);
+    
+            if (angka2 - angka1 >= 0) {
+                angka3 = angka2 - angka1;
+                messageElement.innerHTML = "Kembali : Rp. " + angka3;
+            } else {
+                messageElement.innerHTML = "uang yang Anda masukkan tidak mencukupi untuk membayar barang tersebut.";
+            }
+        }
+    </script>
+</body>
+</html>

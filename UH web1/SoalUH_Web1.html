@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Evaluasi - Score</title>
+</head>
+<body>
+    <form id="scoreForm">
+        <div class="a">
+            <input type="text" placeholder="score" id="score-value">
+        </div>
+        <div class="action">
+            <button type="button" onclick="checkScore()">Check</button>
+            <p id="message-value"></p>
+        </div>
+    </form>
+
+    <script>
+        function checkScore() {
+            var scoreElement = document.getElementById("score-value");
+            var messageElement = document.getElementById("message-value");
+    
+            var score = parseFloat(scoreElement.value);
+    
+            if (score >= 90) {
+                messageElement.innerHTML = "Selamat Anda mendapatkan nilai A!";
+            } else if (score >= 80 && score <= 89) {
+                messageElement.innerHTML = "Anda mendapatkan nilai B!";
+            } else if (score >= 70 && score <= 79) {
+                messageElement.innerHTML = "Anda mendapatkan nilai C!";
+            } else if (score >= 61 && score <= 69) {
+                messageElement.innerHTML = "Anda mendapatkan nilai D!";
+            } else if (score >= 0 && score <= 60) {
+                messageElement.innerHTML = "Anda mendapatkan nilai E!";
+            } else {
+                messageElement.innerHTML = "Masukkan nilai yang valid (0 - 100)!";
+            }
+        }
+    </script>
+</body>
+</html>

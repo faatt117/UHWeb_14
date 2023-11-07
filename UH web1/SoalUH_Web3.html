@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Check - Angka</title>
+</head>
+<body>
+    <form id="angka">
+        <div class="a">
+            <input type="text" placeholder="angka" id="angka-value">
+        </div>
+        <div class="action">
+            <button type="button" onclick="checkangka()">Check</button>
+            <p id="message-value"></p>
+        </div>
+    </form>
+
+    <script>
+        function checkangka() {
+            var angkaElement = document.getElementById("angka-value");
+            var messageElement = document.getElementById("message-value");
+    
+            var angka = parseFloat(angkaElement.value);
+    
+            if (angka >= 0 && angka <= 31) {
+                if (angka % 2 === 0) {
+                    messageElement.innerHTML = "Bilangan ini adalah bilangan genap";
+                } else {
+                    messageElement.innerHTML = "Bilangan ini adalah bilangan ganjil";
+                }
+            } else {
+                messageElement.innerHTML = "Masukkan nilai yang valid (0 - 31)!";
+            }
+        }
+    </script>
+</body>
+</html>

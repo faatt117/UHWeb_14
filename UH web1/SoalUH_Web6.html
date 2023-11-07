@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Hitung - Aritmatika</title>
+</head>
+<body>
+    <form id="angka">
+        <div class="a">
+            <input type="text" placeholder="angka1" id="angka1-value">
+        </div>
+
+        <div class="a">
+            <input type="text" placeholder="angka2" id="angka2-value">
+        </div>
+
+        <div class="a">
+            <input type="text" placeholder="angka3" id="angka3-value">
+        </div>
+
+        <div class="action">
+            <button type="button" onclick="checktambah()">+</button>
+            <button type="button" onclick="checkkurang()">-</button>
+            <button type="button" onclick="checkkali()">x</button>
+            <button type="button" onclick="checkbagi()">÷</button>
+        </div>
+
+        <p id="message-value"></p>
+    </form>
+
+    <script>
+        function checktambah() {
+            var angka1Element = document.getElementById("angka1-value");
+            var angka2Element = document.getElementById("angka2-value");
+            var messageElement = document.getElementById("message-value");
+    
+            var angka1 = parseFloat(angka1Element.value);
+            var angka2 = parseFloat(angka2Element.value);
+    
+            var hasil = angka1 + angka2;
+            messageElement.innerHTML = "Hasil dari " + angka1 + " + " + angka2 + " adalah " + hasil;
+        }
+
+        function checkkurang() {
+            var angka1Element = document.getElementById("angka1-value");
+            var angka2Element = document.getElementById("angka2-value");
+            var messageElement = document.getElementById("message-value");
+    
+            var angka1 = parseFloat(angka1Element.value);
+            var angka2 = parseFloat(angka2Element.value);
+    
+            var hasil = angka1 - angka2;
+            messageElement.innerHTML = "Hasil dari " + angka1 + " - " + angka2 + " adalah " + hasil;
+        }
+
+        function checkkali() {
+            var angka1Element = document.getElementById("angka1-value");
+            var angka2Element = document.getElementById("angka2-value");
+            var messageElement = document.getElementById("message-value");
+    
+            var angka1 = parseFloat(angka1Element.value);
+            var angka2 = parseFloat(angka2Element.value);
+    
+            var hasil = angka1 * angka2;
+            messageElement.innerHTML = "Hasil dari " + angka1 + " x " + angka2 + " adalah " + hasil;
+        }
+
+        function checkbagi() {
+            var angka1Element = document.getElementById("angka1-value");
+            var angka2Element = document.getElementById("angka2-value");
+            var messageElement = document.getElementById("message-value");
+    
+            var angka1 = parseFloat(angka1Element.value);
+            var angka2 = parseFloat(angka2Element.value);
+    
+            if (angka2 !== 0) {
+                var hasil = angka1 / angka2;
+                messageElement.innerHTML = "Hasil dari " + angka1 + " ÷ " + angka2 + " adalah " + hasil;
+            } else {
+                messageElement.innerHTML = "Tidak dapat membagi oleh nol. Masukkan angka yang valid.";
+            }
+        }
+    </script>
+</body>
+</html>

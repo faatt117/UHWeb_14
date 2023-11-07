@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="loginForm">
+        <p class="judul">Login</p>
+
+        <div class="un">
+            <input type="text" placeholder="Username" id="username">
+        </div>
+
+        <div class="pw">
+            <input type="password" placeholder="Password" id="password">
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div id="outputuser"></div>
+        <div id="outputpass"></div>
+    </form>
+
+    <script>
+        let loginForm = document.querySelector("#loginForm");
+        let outputuser = document.querySelector("#outputuser");
+        let outputpass = document.querySelector("#outputpass");
+
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "stematel" && password === "2023") {
+                outputuser.innerHTML = "stematel";
+                outputpass.innerHTML = "2023";
+                outputuser.innerHTML = "Selamat Anda Berhasil Login!";
+            } else {
+                outputuser.innerHTML = "Maaf anda gagal login";
+                outputpass.innerHTML = "--------------";
+            }
+        });
+    </script>
+</body>
+</html>

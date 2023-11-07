@@ -1,0 +1,49 @@
+body{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    background-image: linear-gradient(to right,#d06464,#ffffff);
+}
+
+form{
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    max-width: 600px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button{
+    padding: 5px;
+    background: #d06464;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: white;
+    width: 100%;
+}
+.judul{
+    color: #ffa9a9;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+
+}
+input{
+    background: #ffa9a9;
+    outline: none;
+    border: none;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    border-radius: 20px;
+    color: white;
+}
+
+input::placeholder{
+    color: white;
+    font-style: italic;
+    font-size: 15px;
+}
